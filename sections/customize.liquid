@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+ <link rel="stylesheet" href="{{ 'original-base.css' | asset_url }}">
+  <link rel="stylesheet" href="styles/index.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>焼肉ECサイト</title>
+</head>
+
+<body>
+  <header class="header">
+    <button class="mobile-menu__btn" id="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </div>
+    <div class="mobile-menu__cover" id="menu">
+      <ul class="mobile-menu__info">
+        <li class="mobile-menu__list">
+          <a href={{shop.url}}><img class="mobile-menu__shopLogo" src="./images/logo2.png" alt=""></a>
+        </li>
+        <li class="mobile-menu__list"><a href={{shop.url}} class="mobile-menu__link" id="link1">
+            <h1 class="mobile-menu__linkText"><span>H</span>ome
+          </a></h1>
+        </li>
+        {% assign collection  = collections["all"] %}
+        <li class="mobile-menu__list"><a href={{collection.url}} class="mobile-menu__link">
+            <h1 class="mobile-menu__linkText"><span>P</span>roduct
+          </a></h1>
+        </li>
+        <li class="mobile-menu__list"><a href="blog.html" class="mobile-menu__link">
+            <h1 class="mobile-menu__linkText"><span>B</span>log
+          </a></h1>
+        </li>
+        <li class="mobile-menu__list">
+          <div class="mobile-menu__map"><img class="mobile-menu__logo" src="images/map.png" alt="">
+            <h1 class="mobile-menu__mapText">〒100-0014 東京都千代田区永田町<br />１丁目７−１</h1>
+          </div>
+        </li>
+        <li class="mobile-menu__list">
+          <div class="mobile-menu__tel"><img class="mobile-menu__logo" src="images/phone.png" alt="">
+            <p>000-123-4567</p>
+          </div>
+        </li>
+        <div class="mobile-menu__snsLogo">
+          <li class="mobile-menu__list"><img class="mobile-menu__logo menu-instagram" src="images/instagram.png" alt=""></li>
+          <li class="mobile-menu__list"><img class="mobile-menu__logo" src="images/facebook.gif" alt=""></li>
+        </div>
+      </ul>
+    </div>
+  </header>
+
+
+  <section class="slider">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"> <img src="/images/24189062_s.jpg" alt="a" class="slider__image"><a href="#brand1">
+            <div class="slider__explain">
+              <h1 class="slider__explainTitle">神戸牛</h1>
+              <div class="slider__explainDetail">
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+              </div>
+              <p class="slider__explainTap">詳しくはスライドをタップ</p>
+            </div>
+          </a></div>
+        <div class="swiper-slide"> <img src="images/3722297_s.jpg" alt="" class="slider__image"><a href="#brand2">
+            <div class="slider__explain">
+              <h1 class="slider__explainTitle">仙台牛</h1>
+              <div class="slider__explainDetail">
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+              </div>
+              <p class="slider__explainTap">詳しくはスライドをタップ</p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide"><img src="images/4091193_s.jpg" alt="" class="slider__image"><a href="#brand3">
+            <div class="slider__explain">
+              <h1 class="slider__explainTitle">松阪牛</h1>
+              <div class="slider__explainDetail">
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+              </div>
+              <p class="slider__explainTap">詳しくはスライドをタップ</p>
+            </div>
+          </a></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- slider -->
+  </section>
+  <section>
+    <h1 class="sectionTitle"><span>B</span>rand</h1>
+    <div class="container">
+      <div class="bg">
+        <a id="brand1"></a>
+        <div class="glass">
+          <img class= "brand__img" src="./images/brand1.jpg"/>
+          <h1 class="brand__title">{{section.settings.brand1-title}}</h1>
+       <p>{{section.settings.brand1-description}}</p>
+        </div>
+      </div>
+      <div class="bg">
+        <div class="glass">
+          <a id="brand2"></a>
+          <img class= "brand__img" src="./images/brand2.jpg"/>
+          <h1 class="brand__title">{{section.settings.brand2-title}}</h1>
+        <p>{{section.settings.brand2-description}}</p>
+        </div>
+      </div>
+      <div class="bg">
+        <div class="glass">
+          <a id="brand3"></a>
+          <img class= "brand__img" src="https://www.city.matsusaka.mie.jp/uploaded/image/5017.jpg"/>
+          <h1 class="brand__title">{{section.settings.brand3-title}}</h1>
+          <p>{{section.settings.brand3-description}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- brand -->
+  </section>
+   <section>   
+    <h1 class="sectionTitle"><span>R</span>ecommend</h1>
+    <div class="container">
+      <ul class="product__all">
+        {% assign collection = collections["recommend"] %}
+        {% for product in collection.products %}
+        <li class="product__list">
+        <a href={{product.url}}>
+            <div class="product">
+              <figure class="product-thumbnail"><img class="product__image" src="{{ product.featured_image | img_url:'300x' }}"></figure>
+              <div class="product__info">
+                <h1 class="product__title">{{product.title}}</h1>
+                <!-- <p>{{product.description}}</p> -->
+                <p class="product__explainTap">Tapで購入ページへ</p>
+              </div>
+            </div>
+          </li>
+        </a>
+        {% endfor%}
+      </ul>
+    </div>
+  </section>
+  <section class="category">
+    <h1 class="sectionTitle"><span>C</span>ategory</h1>
+  
+    <div class="container">
+    <ul class="category__all">
+      {% for collection in collections %}
+      <li class="category__list">
+        <a href={{collection.url}}>
+          <img class="category__img" src={{ collection.image | img_url:'300x' }}alt="">
+          <p class="category__text">{{collection.title}}</p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  </section>
+  <section class="category">
+    <h1 class="sectionTitle"><span>C</span>ategory</h1>
+    <div class="container">
+    <ul class="category__all">
+      <li class="category__list">
+        <a href="./feature.html">
+          <img class="category__img" src="./images/karubi.jpg" alt="">
+          <!-- <p class="category__text">牛カルビ</p> -->
+          <p>{{collection.title}}</p>
+        </a>
+      </li>
+      <li class="category__list">
+        <a href="./feature.html">
+          <img class="category__img" src="./images/tan.jpg" alt="">
+          <p class="category__text">牛タン</p>
+        </a>
+      </li>
+      <li class="category__list">
+        <a href="./feature.html">
+          <img class="category__img" src="./images/23768190_s.jpg" alt="">
+          <p class="category__text">ハラミ</p>
+        </a>
+      </li>
+      <li class="category__list">
+        <a href="./feature.html">
+          <img class="category__img" src="./images/kiriotoshi.jpg" alt="">
+          <p class="category__text">お手頃</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  </section>
+  <section>
+    <h1 class="sectionTitle"><span>Q</span>&A</h1>
+    <div class="container">
+      <dl class="accordion js-accordion">
+        <div class="accordion__item js-accordion-trigger">
+          <dt class="accordion__title">Question1</dt>
+          <dd class="accordion__content">Answer1</dd>
+        </div>
+        <div class="accordion__item js-accordion-trigger">
+          <dt class="accordion__title">Question2</dt>
+          <dd class="accordion__content">Answer2</dd>
+        </div>
+        <div class="accordion__item js-accordion-trigger">
+          <dt class="accordion__title">Question3</dt>
+          <dd class="accordion__content">Answer3</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+  <section>
+    <h1 class="sectionTitle"><span>B</span>log</h1>
+    <!-- blog -->
+    <div class="container">
+      <a href="blog.html">
+        <div class="blog">
+          <img src="./images/4091193_s.jpg" alt="ブログのサムネイル" class="blog__thumbNail">
+          <h1>見出し文</h1>
+        </div>
+      </a>
+      <a href="blog.html">
+        <div class="blog">
+          <img src="./images/3722297_s.jpg" alt="ブログのサムネイル" class="blog__thumbNail">
+          <h1>見出し文</h1>
+        </div>
+      </a>
+      <div class="blog-wrap">
+        <input id="trigger1" class="blog-trigger" type="checkbox">
+        <label class="blog-btn" for="trigger1"></label>
+        <div class="blog-item">
+          <a href="blog.html">
+            <div class="blog__hide">
+              <img src="./images/4091193_s.jpg" alt="ブログのサムネイル" class="blog__thumbNail">
+              <h1>見出し文</h1>
+            </div>
+          </a>
+          <a href="blog.html">
+            <div class="blog__hide">
+              <img src="./images/3722297_s.jpg" alt="ブログのサムネイル" class="blog__thumbNail">
+              <h1>見出し文</h1>
+            </div>
+          </a>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section>
+  <h1 class="sectionTitle"><span>M</span>ap</h1>
+  <div class="container">
+    <iframe class="footer__googleMap"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5550582352525!2d139.7038615!3d35.7125654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d399ddaa763%3A0x954afc3e292c9a7e!2z6auY55Sw6aas5aC06aeF!5e0!3m2!1sja!2sjp!4v1657539429909!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  </section>
+
+  <footer>
+   <a href={{shop.url}}> <img class="footer__shopLogo" src="./images/logo.png" alt=""></a>
+    <div class="footer__links">
+      <a class="footer__link" href={{shop.url}}>
+        <h4><span>H</span>ome</h4>
+      </a>
+      {% assign collection = collections["all"] %}
+      <a class="footer__link" href={{collection.url}}>
+        <h4><span>P</span>roduct</h4>
+      </a>
+      <a class="footer__link" href={{blog.url}}>
+        <h4><span>B</span>log</h4>
+      </a>
+    </div>
+    <ul class="footer">
+      <li class="mobile-menu__list">
+        <div class="footer__map"><img class="footer__logo" src="images/map.png" alt="">
+          <p>〒100-0014 東京都千代田区永田町１丁目７−１</p>
+        </div>
+      </li>
+      <div class="footer__contact">
+        <li class="mobile-menu__list">
+          <div class="footer__tel"><img class="footer__logoTel" src="images/phone.png" alt="">
+            <p>000-123-4567</p>
+          </div>
+        </li>
+        <div class="footer__snsLogo">
+          <li class="footer__list"><img class="footer__logo instagram" src="images/instagram.png" alt=""></li>
+          <li class="mobile-menu__list"><img class="footer__logo facebook" src="images/facebook.gif" alt=""></li>
+        </div>
+      </div>
+    </ul>
+
+  </footer>
+  <script src="{{ 'original-main.js' | asset_url }}"></script>
+</body>
+
+</html>
+
+{% schema %}
+{
+	"name": "Brand",
+	"settings": [
+  {
+    "type": "text",
+    "id": "brand1-title",
+    "default":"神戸牛",
+    "label": "ブランドの説明を書いてください"
+  },
+		{
+			"type": "textarea",
+			"id": "brand1-description",
+      "default":"ここに神戸牛の説明を入れるんやでー",
+			"label": "ブランドの説明を書いてください"
+		},
+    {
+      "type": "text",
+      "id": "brand2-title",
+      "default":"仙台牛",
+      "label": "ブランドの説明を書いてください"
+    },
+    {
+      "type": "textarea",
+      "id": "brand2-description",
+      "label": "コメント２",
+      "default": "ここにブランド3つ目の説明"
+    },
+    {
+      "type": "text",
+      "id": "brand3-title",
+      "default":"松阪牛",
+      "label": "ブランドの説明を書いてください"
+    },
+    {
+      "type": "textarea",
+      "id": "brand3-description",
+      "label": "コメント２",
+      "default": "ここにブランド3つ目の説明"
+    }
+	]
+}
+{% endschema %}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="{{ 'original-base.css' | asset_url }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <h1 class="sectionTitle"><span>Q</span>&A</h1>
+    <div class="container">
+      <dl class="accordion js-accordion">
+        <div class="accordion__item js-accordion-trigger">
+          <dt class="accordion__title">{{section.settings.question1}}</dt>
+          <dd class="accordion__content">{{section.settings.answer1}}</dd>
+        </div>
+        <div class="accordion__item js-accordion-trigger">
+          <dt class="accordion__title">{{section.settings.question2}}</dt>
+          <dd class="accordion__content">{{section.settings.answer2}}</dd>
+        </div>
+        <div class="accordion__item js-accordion-trigger">
+          <dt class="accordion__title">{{section.settings.question3}}</dt>
+          <dd class="accordion__content">{{section.settings.answer3}}</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+  <script src="{{ 'original-main.js' | asset_url }}"></script>
+</body>
+</html>
+
+{% schema %}
+{
+	"name": "Q and A",
+	"settings": [
+  {
+    "type": "text",
+    "id": "question1",
+    "default":"Question1",
+    "label": "よくある質問を入力してください"
+  },
+		{
+			"type": "textarea",
+			"id": "answer1",
+      "default":"answer1",
+			"label": "回答を書いてください"
+		},
+    {
+      "type": "text",
+      "id": "question2",
+      "default":"Question2",
+      "label": "よくある質問を入力してください"
+    },
+    {
+      "type": "textarea",
+			"id": "answer2",
+      "default":"answer2",
+			"label": "回答を書いてください"
+    },
+    {
+      "type": "text",
+      "id": "question3",
+      "default":"Question3",
+      "label": "よくある質問を入力してください"
+    },
+    {
+      "type": "textarea",
+			"id": "answer3",
+      "default":"answer3",
+			"label": "回答を書いてください"
+    }
+	]
+}
+{% endschema %}

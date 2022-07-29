@@ -7,6 +7,9 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="stylesheet" href="//unpkg.com/swiper/swiper-bundle.min.css">
+
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -30,6 +33,7 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
     {{ content_for_header }}
 
     {%- liquid
@@ -223,13 +227,16 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% section 'announcement-bar' %}
-    {% section 'header' %}
+    <!-- {% section 'header' %} -->
+   
+    
+    
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {%section "customize" %}
       {{ content_for_layout }}
     </main>
-
-    {% section 'footer' %}
+    
+    <!-- {% section 'footer' %} -->
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
