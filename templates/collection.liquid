@@ -7,7 +7,7 @@
    {%for product in collection.products %}
     <li class="category__list">
       <a class="categoryPage"href={{product.url}}>
-        <img class="category__img" src="{{product.featured_image.src| img_url:"1000px" }}"alt="">
+        <img class="category__img" src="{{product.featured_image.src| img_url:"1000x" }}"alt="">
         <p class="categoryPage__text">{{product.title}}</p>
         <p class="categoryPage__text" >{{product.price | money}}</p>
       </a>

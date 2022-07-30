@@ -370,8 +370,17 @@ a {
   color: #e0ca82;
   position: relative;
   top: 20px;
+  margin-bottom: 10%;
   text-align: center;
   font-size: 2.5rem;
+}
+.product__descriptionArea{
+  width: 80%;
+  margin: auto;
+}
+.product__description {
+  color: #e0ca82;
+  font-size: 1.2rem;
 }
 
 .product__all {
@@ -397,7 +406,7 @@ a {
 .product__explainTap {
   color: #e0ca82;
   margin-left: 50%;
-  margin-top: 25%;
+  margin-top: 5%;
   font-family: "Gulzar", serif;
 }
 
