@@ -194,8 +194,9 @@
           "image_1": "shopify:\/\/shop_images\/brand1.jpg",
           "brand1-title": "神戸牛",
           "brand1-description": "ここに神戸牛の説明を入れるんやでー",
+          "image_2": "shopify:\/\/shop_images\/brand2.jpg",
           "brand2-title": "仙台牛",
-          "brand2-description": "ここにブランド3つ目の説明",
+          "brand2-description": "仙台牛は口当たりが良く柔らかで,まろやかな風味と豊かな肉汁が特徴です。霜降り牛肉づくりには,きれいな水と良質で豊富な稲わらが欠かせません。宮城県はお米の産地で,秋の降水量が少なく,乾燥していることから良質な稲わらが生産されており,北海道や関東・北陸まで流通しています。良質な稲わらをたくさん食べて2年半大切に育てられた牛が,仙台牛として生産されています。",
           "brand3-title": "松阪牛",
           "brand3-description": "ここにブランド3つ目の説明"
         }
