@@ -100,24 +100,6 @@
     "show_vendor": false,
     "show_cart_note": false,
     "sections": {
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "blocks": {
-          "announcement-bar-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "Welcome to our store",
-              "color_scheme": "background-1",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "announcement-bar-0"
-        ],
-        "settings": {
-        }
-      },
       "header": {
         "type": "header",
         "settings": {
@@ -189,8 +171,60 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "original-header": {
+        "type": "original-header",
+        "settings": {
+        }
+      },
+      "original-slider": {
+        "type": "original-slider",
+        "settings": {
+          "slide1-title": "神戸牛",
+          "slide1-description": "ここに神戸牛の説明を入れるんやでー",
+          "slide2-title": "仙台牛",
+          "slide2-description": "ここにブランド3つ目の説明",
+          "slide3-title": "松阪牛",
+          "slide3-description": "ここにブランド3つ目の説明"
+        }
+      },
+      "original-brand": {
+        "type": "original-brand",
+        "settings": {
+          "image_1": "shopify:\/\/shop_images\/brand1.jpg",
+          "brand1-title": "神戸牛",
+          "brand1-description": "ここに神戸牛の説明を入れるんやでー",
+          "brand2-title": "仙台牛",
+          "brand2-description": "ここにブランド3つ目の説明",
+          "brand3-title": "松阪牛",
+          "brand3-description": "ここにブランド3つ目の説明"
+        }
+      },
+      "original-recomends": {
+        "type": "original-recomends",
+        "settings": {
+        }
+      },
+      "original-category": {
+        "type": "original-category",
+        "settings": {
+        }
+      },
+      "original-question": {
+        "type": "original-question",
+        "settings": {
+          "question1": "question1",
+          "answer1": "answer1",
+          "question2": "Question2",
+          "answer2": "answer2",
+          "question3": "Question3",
+          "answer3": "answer3"
+        }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
@@ -294,24 +328,6 @@
       "show_vendor": false,
       "show_cart_note": false,
       "sections": {
-        "announcement-bar": {
-          "type": "announcement-bar",
-          "blocks": {
-            "announcement-bar-0": {
-              "type": "announcement",
-              "settings": {
-                "text": "Welcome to our store",
-                "color_scheme": "background-1",
-                "link": ""
-              }
-            }
-          },
-          "block_order": [
-            "announcement-bar-0"
-          ],
-          "settings": {
-          }
-        },
         "header": {
           "type": "header",
           "settings": {
