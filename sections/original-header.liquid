@@ -8,13 +8,14 @@
   <div class="mobile-menu__cover" id="menu">
     <ul class="mobile-menu__info">
       <li class="mobile-menu__list">
-        <a href="./index.html"><img class="mobile-menu__shopLogo" src="./images/logo2.png" alt=""></a>
+        <a href={{shop.url}}><img class="mobile-menu__shopLogo" src="{{ 'logo2.png' | asset_url }}" alt="logo"></a>
       </li>
-      <li class="mobile-menu__list"><a href="index.html" class="mobile-menu__link" id="link1">
+      <li class="mobile-menu__list"><a href={{shop.url}} class="mobile-menu__link" id="link1">
           <h1 class="mobile-menu__linkText"><span>H</span>ome
         </a></h1>
       </li>
-      <li class="mobile-menu__list"><a href="feature.html" class="mobile-menu__link">
+      {% assign collection  = collections["all"] %}
+      <li class="mobile-menu__list"><a href={{collection.url}} class="mobile-menu__link">
           <h1 class="mobile-menu__linkText"><span>P</span>roduct
         </a></h1>
       </li>
@@ -23,18 +24,18 @@
         </a></h1>
       </li>
       <li class="mobile-menu__list">
-        <div class="mobile-menu__map"><img class="mobile-menu__logo" src="images/map.png" alt="">
+        <div class="mobile-menu__map"><img class="mobile-menu__logo" src="{{ 'map.png' | asset_url }}">
           <h1 class="mobile-menu__mapText">〒100-0014 東京都千代田区永田町<br />１丁目７−１</h1>
         </div>
       </li>
       <li class="mobile-menu__list">
-        <div class="mobile-menu__tel"><img class="mobile-menu__logo" src="images/phone.png" alt="">
+        <div class="mobile-menu__tel"><img class="mobile-menu__logo" src="{{ 'phone.png' | asset_url }}">
           <p>000-123-4567</p>
         </div>
       </li>
       <div class="mobile-menu__snsLogo">
-        <li class="mobile-menu__list"><img class="mobile-menu__logo menu-instagram" src="images/instagram.png" alt=""></li>
-        <li class="mobile-menu__list"><img class="mobile-menu__logo" src="images/facebook.gif" alt=""></li>
+        <li class="mobile-menu__list"><img class="mobile-menu__logo" src="{{ 'instagram.png' | asset_url }}"  alt="logo"></li>
+        <li class="mobile-menu__list"><img class="mobile-menu__logo" src="{{ 'facebook.gif' | asset_url }}"></li>
       </div>
     </ul>
   </div>

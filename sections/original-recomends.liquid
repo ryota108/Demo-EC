@@ -1,51 +1,22 @@
-<section>
+<section>   
   <h1 class="sectionTitle"><span>R</span>ecommend</h1>
   <div class="container">
     <ul class="product__all">
-      <a href="cart.html">
-        <li class="product__list">
+      {% assign collection = collections["recommend"] %}
+      {% for product in collection.products %}
+      <li class="product__list">
+      <a href={{product.url}}>
           <div class="product">
-            <img src="images/karubi.jpg" alt="" class="product__image">
+            <figure class="product-thumbnail"><img class="product__image" src="{{ product.featured_image | img_url:'300x' }}"></figure>
             <div class="product__info">
-              <h1 class="product__title">Title</h1>
+              <h1 class="product__title">{{product.title}}</h1>
+              <!-- <p>{{product.description}}</p> -->
               <p class="product__explainTap">Tapで購入ページへ</p>
             </div>
           </div>
         </li>
       </a>
-      <a href="cart.html">
-        <li class="product__list">
-          <div class="product">
-            <img src="images/3722297_s.jpg" alt="" class="product__image">
-            <div class="product__info">
-              <h1 class="product__title">Title</h1>
-              <p class="product__explainTap">Tapで購入ページへ</p>
-            </div>
-          </div>
-        </li>
-      </a>
-      <a href="cart.html">
-        <li class="product__list">
-          <div class="product">
-            <img src="images/4091193_s.jpg" alt="" class="product__image">
-            <div class="product__info">
-              <h1 class="product__title">Title</h1>
-              <p class="product__explainTap">Tapで購入ページへ</p>
-            </div>
-          </div>
-        </li>
-      </a>
-      <a href="cart.html">
-        <li class="product__list">
-          <div class="product">
-            <img src="images/23768190_s.jpg" alt="" class="product__image">
-            <div class="product__info">
-              <h1 class="product__title">Title</h1>
-              <p class="product__explainTap">Tapで購入ページへ</p>
-            </div>
-          </div>
-        </li>
-      </a>
+      {% endfor%}
     </ul>
   </div>
 </section>

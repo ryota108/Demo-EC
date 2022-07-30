@@ -25,7 +25,7 @@
     <div class="mobile-menu__cover" id="menu">
       <ul class="mobile-menu__info">
         <li class="mobile-menu__list">
-          <a href={{shop.url}}><img class="mobile-menu__shopLogo" src="./images/logo2.png" alt=""></a>
+          <a href={{shop.url}}><img class="mobile-menu__shopLogo" src="{{ 'logo2.png' | asset_url }}" alt="logo"></a>
         </li>
         <li class="mobile-menu__list"><a href={{shop.url}} class="mobile-menu__link" id="link1">
             <h1 class="mobile-menu__linkText"><span>H</span>ome
@@ -41,18 +41,18 @@
           </a></h1>
         </li>
         <li class="mobile-menu__list">
-          <div class="mobile-menu__map"><img class="mobile-menu__logo" src="images/map.png" alt="">
+          <div class="mobile-menu__map"><img class="mobile-menu__logo" src="{{ 'map.png' | asset_url }}">
             <h1 class="mobile-menu__mapText">〒100-0014 東京都千代田区永田町<br />１丁目７−１</h1>
           </div>
         </li>
         <li class="mobile-menu__list">
-          <div class="mobile-menu__tel"><img class="mobile-menu__logo" src="images/phone.png" alt="">
+          <div class="mobile-menu__tel"><img class="mobile-menu__logo" src="{{ 'phone.png' | asset_url }}">
             <p>000-123-4567</p>
           </div>
         </li>
         <div class="mobile-menu__snsLogo">
-          <li class="mobile-menu__list"><img class="mobile-menu__logo menu-instagram" src="images/instagram.png" alt=""></li>
-          <li class="mobile-menu__list"><img class="mobile-menu__logo" src="images/facebook.gif" alt=""></li>
+          <li class="mobile-menu__list"><img class="mobile-menu__logo" src="{{ 'instagram.png' | asset_url }}"  alt="logo"></li>
+          <li class="mobile-menu__list"><img class="mobile-menu__logo" src="{{ 'facebook.gif' | asset_url }}"></li>
         </div>
       </ul>
     </div>
@@ -62,7 +62,7 @@
   <section class="slider">
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"> <img src="/images/24189062_s.jpg" alt="a" class="slider__image"><a href="#brand1">
+        <div class="swiper-slide"> <img src="{{ 'karubi.jpg' | asset_url }}" alt="a" class="slider__image"><a href="#brand1">
             <div class="slider__explain">
               <h1 class="slider__explainTitle">神戸牛</h1>
               <div class="slider__explainDetail">
@@ -77,7 +77,7 @@
               <p class="slider__explainTap">詳しくはスライドをタップ</p>
             </div>
           </a></div>
-        <div class="swiper-slide"> <img src="images/3722297_s.jpg" alt="" class="slider__image"><a href="#brand2">
+        <div class="swiper-slide"><img src="{{ 'karubi.jpg' | asset_url }}" alt="a" class="slider__image"><a href="#brand2">
             <div class="slider__explain">
               <h1 class="slider__explainTitle">仙台牛</h1>
               <div class="slider__explainDetail">
@@ -93,7 +93,7 @@
             </div>
           </a>
         </div>
-        <div class="swiper-slide"><img src="images/4091193_s.jpg" alt="" class="slider__image"><a href="#brand3">
+        <div class="swiper-slide"><img src="{{ 'karubi.jpg' | asset_url }}" alt="a" class="slider__image"><a href="#brand3">
             <div class="slider__explain">
               <h1 class="slider__explainTitle">松阪牛</h1>
               <div class="slider__explainDetail">
@@ -121,7 +121,7 @@
       <div class="bg">
         <a id="brand1"></a>
         <div class="glass">
-          <img class= "brand__img" src="./images/brand1.jpg"/>
+          <img class= "brand__img" src= "{{ section.settings.image_1 | img_url:"300px"}}"/>
           <h1 class="brand__title">{{section.settings.brand1-title}}</h1>
        <p>{{section.settings.brand1-description}}</p>
         </div>
@@ -129,7 +129,7 @@
       <div class="bg">
         <div class="glass">
           <a id="brand2"></a>
-          <img class= "brand__img" src="./images/brand2.jpg"/>
+          <img class= "brand__img" src= "{{ section.settings.image_2 | img_url:"300px"}}"/>
           <h1 class="brand__title">{{section.settings.brand2-title}}</h1>
         <p>{{section.settings.brand2-description}}</p>
         </div>
@@ -183,14 +183,13 @@
     </ul>
   </div>
   </section>
-  <section class="category">
+  <!-- <section class="category">
     <h1 class="sectionTitle"><span>C</span>ategory</h1>
     <div class="container">
     <ul class="category__all">
       <li class="category__list">
         <a href="./feature.html">
           <img class="category__img" src="./images/karubi.jpg" alt="">
-          <!-- <p class="category__text">牛カルビ</p> -->
           <p>{{collection.title}}</p>
         </a>
       </li>
@@ -214,7 +213,7 @@
       </li>
     </ul>
   </div>
-  </section>
+  </section> -->
   <section>
     <h1 class="sectionTitle"><span>Q</span>&A</h1>
     <div class="container">
@@ -279,7 +278,7 @@
   </section>
 
   <footer>
-   <a href={{shop.url}}> <img class="footer__shopLogo" src="./images/logo.png" alt=""></a>
+   <a href={{shop.url}}> <img class="footer__shopLogo"  src="{{ 'logo.png' | asset_url }}"></a>
     <div class="footer__links">
       <a class="footer__link" href={{shop.url}}>
         <h4><span>H</span>ome</h4>
@@ -294,19 +293,19 @@
     </div>
     <ul class="footer">
       <li class="mobile-menu__list">
-        <div class="footer__map"><img class="footer__logo" src="images/map.png" alt="">
+        <div class="footer__map"><img class="footer__logo" src="{{ 'map.png' | asset_url }}">
           <p>〒100-0014 東京都千代田区永田町１丁目７−１</p>
         </div>
       </li>
       <div class="footer__contact">
         <li class="mobile-menu__list">
-          <div class="footer__tel"><img class="footer__logoTel" src="images/phone.png" alt="">
+          <div class="footer__tel"><img class="footer__logo" src="{{ 'phone.png' | asset_url }}">
             <p>000-123-4567</p>
           </div>
         </li>
         <div class="footer__snsLogo">
-          <li class="footer__list"><img class="footer__logo instagram" src="images/instagram.png" alt=""></li>
-          <li class="mobile-menu__list"><img class="footer__logo facebook" src="images/facebook.gif" alt=""></li>
+          <li class="footer__list"><img class="footer__logo" src="{{ 'instagram.png' | asset_url }}"></li>
+          <li class="mobile-menu__list"><img class="footer__logo" src="{{ 'facebook.gif' | asset_url }}"></li>
         </div>
       </div>
     </ul>
@@ -321,6 +320,11 @@
 {
 	"name": "Brand",
 	"settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "brand1 Image"    
+    },
   {
     "type": "text",
     "id": "brand1-title",
@@ -333,6 +337,11 @@
       "default":"ここに神戸牛の説明を入れるんやでー",
 			"label": "ブランドの説明を書いてください"
 		},
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "brand2 Image"    
+    },
     {
       "type": "text",
       "id": "brand2-title",

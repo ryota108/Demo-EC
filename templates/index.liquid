@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+ <link rel="stylesheet" href="{{ 'original-base.css' | asset_url }}">
+  <link rel="stylesheet" href="styles/index.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>焼肉ECサイト</title>
+</head>
+
+<body>
+  
+  <section class="slider">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"> <img src="{{ 'karubi.jpg' | asset_url }}" alt="a" class="slider__image"><a href="#brand1">
+            <div class="slider__explain">
+              <h1 class="slider__explainTitle">神戸牛</h1>
+              <div class="slider__explainDetail">
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+              </div>
+              <p class="slider__explainTap">詳しくはスライドをタップ</p>
+            </div>
+          </a></div>
+        <div class="swiper-slide"><img src="{{ 'karubi.jpg' | asset_url }}" alt="a" class="slider__image"><a href="#brand2">
+            <div class="slider__explain">
+              <h1 class="slider__explainTitle">仙台牛</h1>
+              <div class="slider__explainDetail">
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+              </div>
+              <p class="slider__explainTap">詳しくはスライドをタップ</p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide"><img src="{{ 'karubi.jpg' | asset_url }}" alt="a" class="slider__image"><a href="#brand3">
+            <div class="slider__explain">
+              <h1 class="slider__explainTitle">松阪牛</h1>
+              <div class="slider__explainDetail">
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+              </div>
+              <p class="slider__explainTap">詳しくはスライドをタップ</p>
+            </div>
+          </a></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- {% section "original-slider"%} -->
+
+  {% section "original-brand"%}
+  
+  {% section "original-recomends"%}
+
+
+  {% section "original-category"%}
+
+  {% section "original-question" %}
+
+  <section>
+    <h1 class="sectionTitle"><span>B</span>log</h1>
+    <!-- blog -->
+    <div class="container">
+      <a href="blog.html">
+        <div class="blog">
+          <img src="./images/4091193_s.jpg" alt="ブログのサムネイル" class="blog__thumbNail">
+          <h1>見出し文</h1>
+        </div>
+      </a>
+      <a href="blog.html">
+        <div class="blog">
+          <img src="./images/3722297_s.jpg" alt="ブログのサムネイル" class="blog__thumbNail">
+          <h1>見出し文</h1>
+        </div>
+      </a>
+      <div class="blog-wrap">
+        <input id="trigger1" class="blog-trigger" type="checkbox">
+        <label class="blog-btn" for="trigger1"></label>
+        <div class="blog-item">
+          <a href="blog.html">
+            <div class="blog__hide">
+              <img src="./images/4091193_s.jpg" alt="ブログのサムネイル" class="blog__thumbNail">
+              <h1>見出し文</h1>
+            </div>
+          </a>
+          <a href="blog.html">
+            <div class="blog__hide">
+              <img src="./images/3722297_s.jpg" alt="ブログのサムネイル" class="blog__thumbNail">
+              <h1>見出し文</h1>
+            </div>
+          </a>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section>
+  <h1 class="sectionTitle"><span>M</span>ap</h1>
+  <div class="container">
+    <iframe class="footer__googleMap"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5550582352525!2d139.7038615!3d35.7125654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d399ddaa763%3A0x954afc3e292c9a7e!2z6auY55Sw6aas5aC06aeF!5e0!3m2!1sja!2sjp!4v1657539429909!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  </section>
+
+  <footer>
+   <a href={{shop.url}}> <img class="footer__shopLogo"  src="{{ 'logo.png' | asset_url }}"></a>
+    <div class="footer__links">
+      <a class="footer__link" href={{shop.url}}>
+        <h4><span>H</span>ome</h4>
+      </a>
+      {% assign collection = collections["all"] %}
+      <a class="footer__link" href={{collection.url}}>
+        <h4><span>P</span>roduct</h4>
+      </a>
+      <a class="footer__link" href={{blog.url}}>
+        <h4><span>B</span>log</h4>
+      </a>
+    </div>
+    <ul class="footer">
+      <li class="mobile-menu__list">
+        <div class="footer__map"><img class="footer__logo" src="{{ 'map.png' | asset_url }}">
+          <p>〒100-0014 東京都千代田区永田町１丁目７−１</p>
+        </div>
+      </li>
+      <div class="footer__contact">
+        <li class="mobile-menu__list">
+          <div class="footer__tel"><img class="footer__logo" src="{{ 'phone.png' | asset_url }}">
+            <p>000-123-4567</p>
+          </div>
+        </li>
+        <div class="footer__snsLogo">
+          <li class="footer__list"><img class="footer__logo" src="{{ 'instagram.png' | asset_url }}"></li>
+          <li class="mobile-menu__list"><img class="footer__logo" src="{{ 'facebook.gif' | asset_url }}"></li>
+        </div>
+      </div>
+    </ul>
+
+  </footer>
+  <script src="{{ 'original-main.js' | asset_url }}"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,168 @@
+<!-- <script type="text/javascript">
+  window.product = {{product | json}} || {};
+</script> -->
+
+<body>
+    <header class="header">
+      <button class="mobile-menu__btn" id="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      </div>
+      <div class="mobile-menu__cover" id="menu">
+        <ul class="mobile-menu__info">
+          <li class="mobile-menu__list">
+            <a href={{shop.url}}><img class="mobile-menu__shopLogo" src="{{ 'logo2.png' | asset_url }}" alt="logo"></a>
+          </li>
+          <li class="mobile-menu__list"><a href={{shop.url}} class="mobile-menu__link" id="link1">
+              <h1 class="mobile-menu__linkText"><span>H</span>ome
+            </a></h1>
+          </li>
+          {% assign collection  = collections["all"] %}
+          <li class="mobile-menu__list"><a href={{collection.url}} class="mobile-menu__link">
+              <h1 class="mobile-menu__linkText"><span>P</span>roduct
+            </a></h1>
+          </li>
+          <li class="mobile-menu__list"><a href="blog.html" class="mobile-menu__link">
+              <h1 class="mobile-menu__linkText"><span>B</span>log
+            </a></h1>
+          </li>
+          <li class="mobile-menu__list">
+            <div class="mobile-menu__map"><img class="mobile-menu__logo" src="{{ 'map.png' | asset_url }}">
+              <h1 class="mobile-menu__mapText">〒100-0014 東京都千代田区永田町<br />１丁目７−１</h1>
+            </div>
+          </li>
+          <li class="mobile-menu__list">
+            <div class="mobile-menu__tel"><img class="mobile-menu__logo" src="{{ 'phone.png' | asset_url }}">
+              <p>000-123-4567</p>
+            </div>
+          </li>
+          <div class="mobile-menu__snsLogo">
+            <li class="mobile-menu__list"><img class="mobile-menu__logo" src="{{ 'instagram.png' | asset_url }}"  alt="logo"></li>
+            <li class="mobile-menu__list"><img class="mobile-menu__logo" src="{{ 'facebook.gif' | asset_url }}"></li>
+          </div>
+        </ul>
+      </div>
+    </header>
+
+  <!-- <section class="cart">
+    <img class="cart__logo" id="cart" src="./images/cart2.png" alt="">
+    <div id="easyModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1>購入ページ </h1>
+          <span class="modalClose">×</span>
+        </div>
+        <div class="modal-body">
+          <div class="cart__product">
+            <img src="./images/4091193_s.jpg" alt="ブログのサムネイル" class="cart__productImage">
+            <div class="cart__productInfo">
+              <h3 class="cart__productTitle">松阪牛200g</h3>
+              <div class="cart__productPriceArea">
+                <h3 class="cart__productPrice">￥3000 ×</h3>
+                <input type="number" placeholder="1"/>
+              </div>
+              <a class="cart__productDelete">削除</a>
+            </div>
+          </div>
+          <div class="cart__product">
+            <img src="./images/24189062_s.jpg" alt="ブログのサムネイル" class="cart__productImage">
+            <div class="cart__productInfo">
+              <h3 class="cart__productTitle">仙台牛200g</h3>
+              <div class="cart__productPriceArea">
+                <h3 class="cart__productPrice">￥2500 ×</h3>
+                <input type="number" placeholder="1"/>
+              </div>
+              <a class="cart__productDelete">削除</a>
+            </div>
+          </div>
+          <div class="cart__totalPrice">
+            <h1>合計　￥5,500</h1>
+            <hr class="cart__border"/>
+          </div>
+          <button class="cart__paymentBtn"><h3>>支払いに進む</h3></button>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- <img class="cart__logo" src="./images/cart.png" alt=""> -->
+    {% for image in product.images %}
+<li><img src="{{ image | image_url}}" alt="" class="slider__image"></li>
+{% endfor %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+<h1 class="cart__meatTitle">{{ product.title }}</h1>
+<hr class="cart__meatBorder"/>
+<div class="cart__meatExplain">
+<p>{{product.description}}</p>
+
+<h1 class="cart__meatPrice">{{product.price | money}}(税込)</h1>
+</div>
+<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+  <select name="id" id="productSelect">
+    {% for variant in product.variants %}
+    {% if variant.available %}
+        <option class="gram-option" value="{{ variant.id }}">
+          {{ variant.title }} - {{ variant.price | money_with_currency }}
+        </option>
+      {% else %}
+        <option disabled="disabled">
+          {{ variant.title }} - sold out
+        </option>
+      {% endif %}
+    {% endfor %}
+  </select>
+  {{ current_variant.price | money }}
+  <label class="quanity-label" for="Quantity">個数</label>
+  <input type="number" class="quanity-input" id="Quantity" name="quantity" value="1" min="1">
+  
+  <button  class="cart__meatBtn" type="submit" name="add" id="AddToCart">Add to cart</button>
+</form>
+<section class="product">
+  
+
+
+{% section "original-category" %}
+
+<section>
+<h1 class="sectionTitle"><span>M</span>ap</h1>
+<div class="container">
+<iframe class="footer__googleMap"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5550582352525!2d139.7038615!3d35.7125654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d399ddaa763%3A0x954afc3e292c9a7e!2z6auY55Sw6aas5aC06aeF!5e0!3m2!1sja!2sjp!4v1657539429909!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+</section>
+<footer>
+  <a href={{shop.url}}> <img class="footer__shopLogo"  src="{{ 'logo.png' | asset_url }}"></a>
+   <div class="footer__links">
+     <a class="footer__link" href={{shop.url}}>
+       <h4><span>H</span>ome</h4>
+     </a>
+     {% assign collection = collections["all"] %}
+     <a class="footer__link" href={{collection.url}}>
+       <h4><span>P</span>roduct</h4>
+     </a>
+     <a class="footer__link" href={{blog.url}}>
+       <h4><span>B</span>log</h4>
+     </a>
+   </div>
+   <ul class="footer">
+     <li class="mobile-menu__list">
+       <div class="footer__map"><img class="footer__logo" src="{{ 'map.png' | asset_url }}">
+         <p>〒100-0014 東京都千代田区永田町１丁目７−１</p>
+       </div>
+     </li>
+     <div class="footer__contact">
+       <li class="mobile-menu__list">
+         <div class="footer__tel"><img class="footer__logo" src="{{ 'phone.png' | asset_url }}">
+           <p>000-123-4567</p>
+         </div>
+       </li>
+       <div class="footer__snsLogo">
+         <li class="footer__list"><img class="footer__logo" src="{{ 'instagram.png' | asset_url }}"></li>
+         <li class="mobile-menu__list"><img class="footer__logo" src="{{ 'facebook.gif' | asset_url }}"></li>
+       </div>
+     </div>
+   </ul>
+
+ </footer>

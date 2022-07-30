@@ -4,39 +4,39 @@
     <div class="bg">
       <a id="brand1"></a>
       <div class="glass">
-        <img class= "brand__img" src="./images/brand1.jpg"/>
+        <img class= "brand__img" src= "{{ section.settings.image_1 | img_url:"300x"}}"/>
         <h1 class="brand__title">{{section.settings.brand1-title}}</h1>
-        <p>{{section.settings.brand1-description}}</p>
+     <p class="brand__description">{{section.settings.brand1-description}}</p>
       </div>
     </div>
     <div class="bg">
       <div class="glass">
         <a id="brand2"></a>
-        <img class= "brand__img" src="./images/brand2.jpg"/>
+        <img class= "brand__img" src= "{{ section.settings.image_2 | img_url:"300x"}}"/>
         <h1 class="brand__title">{{section.settings.brand2-title}}</h1>
-        <p>{{section.settings.brand2-description}}</p>
+      <p class="brand__description">{{section.settings.brand2-description}}</p>
       </div>
     </div>
     <div class="bg">
       <div class="glass">
         <a id="brand3"></a>
-        <img class= "brand__img" src="https://www.city.matsusaka.mie.jp/uploaded/image/5017.jpg"/>
-        <h1 class="brand__title">松阪牛</h1>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <img class= "brand__img" src= "{{ section.settings.image_3 | img_url:"300x"}}"/>
+        <h1 class="brand__title">{{section.settings.brand3-title}}</h1>
+        <p class="brand__description">{{section.settings.brand3-description}}</p>
       </div>
     </div>
   </div>
   <!-- brand -->
 </section>
-
 {% schema %}
 {
-	"name": "Brand1",
+	"name": "Brand",
 	"settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "brand1 Image"    
+    },
   {
     "type": "text",
     "id": "brand1-title",
@@ -50,6 +50,11 @@
 			"label": "ブランドの説明を書いてください"
 		},
     {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "brand2 Image"    
+    },
+    {
       "type": "text",
       "id": "brand2-title",
       "default":"仙台牛",
@@ -59,7 +64,24 @@
       "type": "textarea",
       "id": "brand2-description",
       "label": "コメント２",
-      "default": "ここにブランド２つ目の説明"
+      "default": "ここにブランド3つ目の説明"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "brand Image"    
+    },
+    {
+      "type": "text",
+      "id": "brand3-title",
+      "default":"松阪牛",
+      "label": "ブランドの説明を書いてください"
+    },
+    {
+      "type": "textarea",
+      "id": "brand3-description",
+      "label": "コメント２",
+      "default": "ここにブランド3つ目の説明"
     }
 	]
 }

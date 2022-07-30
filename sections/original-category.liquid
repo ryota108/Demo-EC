@@ -1,31 +1,16 @@
 <section class="category">
   <h1 class="sectionTitle"><span>C</span>ategory</h1>
+
   <div class="container">
   <ul class="category__all">
+    {% for collection in collections %}
     <li class="category__list">
-      <a href="./feature.html">
-        <img class="category__img" src="./images/karubi.jpg" alt="">
-        <p class="category__text">牛カルビ</p>
+      <a href={{collection.url}}>
+        <img class="category__img" src={{ collection.image | img_url:'300x' }}alt="">
+        <p class="category__text">{{collection.title}}</p>
       </a>
     </li>
-    <li class="category__list">
-      <a href="./feature.html">
-        <img class="category__img" src="./images/tan.jpg" alt="">
-        <p class="category__text">牛タン</p>
-      </a>
-    </li>
-    <li class="category__list">
-      <a href="./feature.html">
-        <img class="category__img" src="./images/23768190_s.jpg" alt="">
-        <p class="category__text">ハラミ</p>
-      </a>
-    </li>
-    <li class="category__list">
-      <a href="./feature.html">
-        <img class="category__img" src="./images/kiriotoshi.jpg" alt="">
-        <p class="category__text">お手頃</p>
-      </a>
-    </li>
+    {% endfor %}
   </ul>
 </div>
 </section>

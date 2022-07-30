@@ -8,8 +8,10 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="stylesheet" href="//unpkg.com/swiper/swiper-bundle.min.css">
-
+    <link rel="stylesheet" href="{{ 'original-base.css' | asset_url }}">
+    <link rel="stylesheet" href="styles/index.css">
 <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+ 
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -227,16 +229,15 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    <!-- {% section 'header' %} -->
    
-    
-    
+    {% section 'original-header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {%section "customize" %}
+
       {{ content_for_layout }}
+
     </main>
     
-    <!-- {% section 'footer' %} -->
+    
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -275,5 +276,6 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script src="{{ 'original-main.js' | asset_url }}"></script>
   </body>
 </html>

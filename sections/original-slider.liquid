@@ -1,56 +1,98 @@
 <section class="slider">
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"> <img src="/images/24189062_s.jpg" alt="" class="slider__image"><a href="#brand1">
-          <div class="slider__explain">
-            <h1 class="slider__explainTitle">神戸牛</h1>
-            <div class="slider__explainDetail">
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"> <img src= "{{ section.settings.slide_image_1 | img_url}}" class="slider__image"><a href="#brand1">
+            <div class="slider__explain">
+              <h1 class="slider__explainTitle">{{section.settings.slide1-title}}</h1>
+              <div class="slider__explainDetail">
+            <p>{{section.settings.slide1-description}}</p>
+              </div>
+              <p class="slider__explainTap">詳しくはスライドをタップ</p>
             </div>
-            <p class="slider__explainTap">詳しくはスライドをタップ</p>
-          </div>
-        </a></div>
-      <div class="swiper-slide"> <img src="images/3722297_s.jpg" alt="" class="slider__image"><a href="#brand2">
-          <div class="slider__explain">
-            <h1 class="slider__explainTitle">仙台牛</h1>
-            <div class="slider__explainDetail">
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            </div>
-            <p class="slider__explainTap">詳しくはスライドをタップ</p>
-          </div>
-        </a>
+          </a></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img src= "{{ section.settings.slide_image_2 | img_url}}" class="slider__image"><a href="#brand2">
+                <div class="slider__explain">
+                  <h1 class="slider__explainTitle">{{section.settings.slide2-title}}</h1>
+                  <div class="slider__explainDetail">
+                <p>{{section.settings.slide2-description}}</p>
+                  </div>
+                  <p class="slider__explainTap">詳しくはスライドをタップ</p>
+                </div>
+              </a></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"> <img src= "{{ section.settings.slide_image_3 | img_url}}" class="slider__image"><a href="#brand">
+                    <div class="slider__explain">
+                      <h1 class="slider__explainTitle">{{section.settings.slide3-title}}</h1>
+                      <div class="slider__explainDetail">
+                    <p>{{section.settings.slide3-description}}</p>
+                      </div>
+                      <p class="slider__explainTap">詳しくはスライドをタップ</p>
+                    </div>
+                  </a></div>
       </div>
-      <div class="swiper-slide"><img src="images/4091193_s.jpg" alt="" class="slider__image"><a href="#brand3">
-          <div class="slider__explain">
-            <h1 class="slider__explainTitle">松阪牛</h1>
-            <div class="slider__explainDetail">
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            </div>
-            <p class="slider__explainTap">詳しくはスライドをタップ</p>
-          </div>
-        </a></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <!-- slider -->
-</section>
+  </section>
+
+
+{% schema %}
+{
+	"name": "Slide",
+	"settings": [
+    {
+      "type": "image_picker",
+      "id": "slide_image_1",
+      "label": "slide1 Image"    
+    },
+  {
+    "type": "text",
+    "id": "slide1-title",
+    "default":"神戸牛",
+    "label": "ブランドの説明を書いてください"
+  },
+		{
+			"type": "textarea",
+			"id": "slide1-description",
+      "default":"ここに神戸牛の説明を入れるんやでー",
+			"label": "ブランドの説明を書いてください"
+		},
+    {
+      "type": "image_picker",
+      "id": "slide_image_2",
+      "label": "slider2 Image"    
+    },
+    {
+      "type": "text",
+      "id": "slide2-title",
+      "default":"仙台牛",
+      "label": "ブランドの説明を書いてください"
+    },
+    {
+      "type": "textarea",
+      "id": "slide2-description",
+      "label": "コメント２",
+      "default": "ここにブランド3つ目の説明"
+    },
+    {
+      "type": "image_picker",
+      "id": "slide_image_3",
+      "label": "slider3 Image"    
+    },
+    {
+      "type": "text",
+      "id": "slide3-title",
+      "default":"松阪牛",
+      "label": "ブランドの説明を書いてください"
+    },
+    {
+      "type": "textarea",
+      "id": "slide3-description",
+      "label": "コメント２",
+      "default": "ここにブランド3つ目の説明"
+    }
+	]
+}
+{% endschema %} 
