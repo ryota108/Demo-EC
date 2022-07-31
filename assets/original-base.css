@@ -224,12 +224,19 @@ a {
 .slider__explainTitle {
   color: white;
   font-size: 30px;
+  position: relative;
+  top: 5%;
   text-align: center;
 }
 
 .slider__explainDetail {
   color: white;
-  margin-left: 10%;
+  width: 80%;
+}
+.slider__explainDetail > p{
+  margin-top: 10%;
+  font-family: "Gulzar", serif;
+
 }
 
 .slider__explainTap {
@@ -312,7 +319,7 @@ a {
   color: white;
 }
 
-.brand__description{
+.brand__description {
   font-family: "HG行書体";
 }
 
@@ -374,7 +381,7 @@ a {
   text-align: center;
   font-size: 2.5rem;
 }
-.product__descriptionArea{
+.product__descriptionArea {
   width: 80%;
   margin: auto;
 }
@@ -594,7 +601,7 @@ a {
 
 .blog > h1 {
   color: white;
-  margin-left: 10px;
+  margin: auto;
 }
 
 .blog__thumbNail {
@@ -604,6 +611,11 @@ a {
   object-fit: contain;
 }
 
+.blog__publishDate {
+  color: white;
+  font-size: 0.5rem;
+  margin-top: 25%;
+}
 .blogSection {
   margin-top: 0px;
 }
@@ -717,6 +729,13 @@ a {
   padding: 10px 20px;
   color: black;
 }
+.cart__remove{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  font-weight: 100;
+  font-size: small;
+  text-decoration: underline;
+}
 
 .cart__product {
   background-color: transparent;
@@ -731,8 +750,19 @@ a {
 }
 
 .cart__productImage {
-  width: 50%;
-  height: 100%;
+  width: 125px;
+  height: auto;
+  margin-left: 0%;
+}
+
+th {
+  color: #e0ca82;
+}
+
+.cart__subtotal {
+  color: #e0ca82;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 .cart__productTitle {
@@ -812,6 +842,25 @@ a {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
+.checkout__btn {
+  font-family: "Gulzar", serif;
+  margin-left: 25%;
+  font-size: 1.5rem;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border: 2px solid #e0ca82;
+  padding: 5px 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: black;
+  text-decoration: none !important;
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
 .cart__paymentBtn > h3 {
   font-size: 1rem;
 }
@@ -845,7 +894,7 @@ select {
   padding: 5px 15px;
   border-radius: 20px;
 }
-.quanity-label{
+.quanity-label {
   color: #e0ca82;
   font-family: "Gulzar", serif;
 }
@@ -855,7 +904,7 @@ select {
   text-align: center;
   margin-top: 2%;
 }
-.cart__price{
+.cart__price {
   color: #e0ca82;
 }
 
@@ -908,6 +957,17 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.cart__quanity-input {
+  background-color: #000;
+  color: white;
+  margin-top: 5%;
+  margin-right: 2%;
+  outline: none;
+  width: 50px;
+  border: 1px solid #e0ca82;
+  padding: 5px 20px;
+  border-radius: 20px;
 }
 
 .cart__meatPrice {
@@ -1043,4 +1103,22 @@ select {
   width: 35px;
   height: 35px;
   margin-top: -5px;
+}
+
+.card__badge .badge {
+  border-radius: 0;
+  font-size: 13px;
+  background-color: red;
+  font-weight: bold;
+  border: none;
+}
+
+.price .price__badge-sale {
+  border-radius: 0;
+  font-size: 13px;
+  background-color: red;
+  font-weight: bold;
+  border: none;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }

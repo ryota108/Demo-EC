@@ -1,9 +1,9 @@
 <section>   
-  <h1 class="sectionTitle"><span>R</span>ecommend</h1>
+  <h1 class="sectionTitle">{{section.settings.RecommendTitle}}</h1>
   <div class="container">
     <ul class="product__all">
       {% assign collection = collections["recommend"] %}
-      {% for product in collection.products %}
+      {% for product in collections[section.settings.feature_collection].products %}
       <li class="product__list">
       <a href={{product.url}}>
           <div class="product">
@@ -22,3 +22,20 @@
     </ul>
   </div>
 </section>
+{%schema%}
+{
+	"name": "Recommend",
+	"settings": [
+  {
+    "type": "text",
+    "id": "RecommendTitle",
+    "default":"Recommend",
+    "label": "おすすめ欄のタイトルを入力してください"
+  },{
+    "type": "collection",
+            "id": "feature_collection",
+            "label": "Chose Collection to show on slideshow"
+  }
+	]
+}
+{%endschema%}

@@ -2,30 +2,32 @@
   <h1>cart</h1>
   <form action="/cart" method="post" novalidate>
     <table>
-      <thead>
-        <th colspan="2">Prod</th>
-        <th>Price</th>
-        <th>Qty</th>
-        <th>total</th>
+      <thead >
+        <th colspan="2">商品</th>
+        <th>値段</th>
+        <!-- <th>量</th> -->
+        <th>小計</th>
       </thead>
       <tbody>
         {% for item in cart.items %}
           <tr>
             <td>
               <a  href="{{ item.url | within: collections.all }}">
-                <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
+                <img class="cart__productImage" src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
               </a>
             </td>
-            <td >
-              <a  class="cart__product" href="{{ item.url }}">{{ item.product.title }}</a>
+            <td style="color: white;">
+              <a  style="color: white;" href="{{ item.url }}">{{ item.product.title }}</a>
               {{ item.variant.title }}
-              <a href="/cart/change?line={{ forloop.index }}&quantity=0">remove</a>
+              <a class="cart__remove" style="color:white" href="/cart/change?line={{ forloop.index }}&quantity=0">remove</a>
             </td>
-            <td class="cart__price">{{ item.price | money }}</td>
-            <td >
-              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
+            <td class="cart__price">{{ item.price | money }}
+              <input class="cart__quanity-input" type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
             </td>
-            <td>
+            <!-- <td >
+              <input class="cart__quanity-input" type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
+            </td> -->
+            <td style="color: white;">
               {% if item.original_line_price != item.line_price %}{{ item.original_line_price | money }}{% endif %}
               {{ item.line_price | money }}
               {% for discount in item.discounts %}{{ discount.title }}{% endfor %}
@@ -35,12 +37,12 @@
       </tbody>
     </table>
     <div>
-      <p>sub total : {{ cart.total_price | money }}</p>
-      <button type="submit" name="update">Update</button>
-      <button type="submit" name="checkout">Checkout</button>
+      <p class="cart__subtotal">合計 : {{ cart.total_price | money }}</p>
+      <!-- <button type="submit" name="update">Update</button> -->
+      <button class="checkout__btn"type="submit" name="checkout">購入手続きに進む</button>
     </div>
   </form>
 {% else %}
   <h2>cart</h2>
-  Cart is empty
+  カートにはなにも入っていません
 {% endif %}
