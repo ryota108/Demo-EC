@@ -205,6 +205,8 @@
       "original-recomends": {
         "type": "original-recomends",
         "settings": {
+          "RecommendTitle": "Recommend",
+          "feature_collection": "recommend"
         }
       },
       "original-category": {
@@ -221,6 +223,11 @@
           "answer2": "商品の性質上、お客様のご都合によるキャンセル・返品はいたしかねますので、ご了承ください。商品の不良等、当社理由による不具合がございましたら、お受取後、2日以内にお電話ください。○ご連絡先：0120-315-529 （受付時間：平日9:00 ～17:00 ）",
           "question3": "どの配送会社を使用してますか？",
           "answer3": "ヤマト運輸\/クール宅急便（冷凍）での配送となります。配送業者の変更はできかねますので、あらかじめご了承ください。"
+        }
+      },
+      "original-footer": {
+        "type": "original-footer",
+        "settings": {
         }
       }
     },
