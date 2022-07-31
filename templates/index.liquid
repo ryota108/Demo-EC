@@ -43,13 +43,7 @@
             <div class="slider__explain">
               <h1 class="slider__explainTitle">松阪牛</h1>
               <div class="slider__explainDetail">
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>松阪牛は、三大和牛として称され、正式名称を「まつさかうし」として親しまれているブランドです。その特徴は霜降りの肉質で脂分が豊富で、食べた時にとろける様なまろやかさがある牛肉で、非常に美味しいことから人気となっています。</p>
               </div>
               <p class="slider__explainTap">詳しくはスライドをタップ</p>
             </div>
@@ -73,7 +67,7 @@
 
   <section>
     <h1 class="sectionTitle"><span>B</span>log</h1>
-    <!-- blog -->
+
     <div class="container">
     {% for article in blogs["ALL"].articles |limit:2 %}
     <a href={{article.url}}>
@@ -84,7 +78,7 @@
       </div>
     </a>
     {% endfor %}
-      <a style="color: white;" href= "{{blogs["ALL"].url}}" >
+      <a class="blog__viewMore" href= "{{blogs["ALL"].url}}" >
         view more
       </a>
     </div>

@@ -635,22 +635,39 @@ a {
 
 .blog__title {
   color: #e0ca82;
+  font-family: "Gulzar", serif;
   text-align: center;
+  margin-top: 10px;
+}
+
+.blog__viewMore{
+  color: #e0ca82;
+  font-family: "Gulzar", serif;
+  margin-left: 35%;
 }
 
 .blog__border {
   width: 80%;
+  margin-top: 5%;
+  background-color: #e0ca82;
   margin: auto;
 }
 
+.blog__main {
+  width: 80%;
+  margin: auto;
+  letter-spacing: 2px;
+}
+
 .blog__text {
-  color: white;
-  text-align: center;
+  color: #e0ca82;
+  font-family: "Gulzar", serif;
   margin-top: 5%;
 }
 
 .blog__info {
   display: -webkit-box;
+  font-family: "Gulzar", serif;
   display: -ms-flexbox;
   display: flex;
   color: #e0ca82;
