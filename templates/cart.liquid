@@ -11,12 +11,12 @@
       <tbody>
         {% for item in cart.items %}
           <tr>
-            <td>
+            <td class="cart__productTd">
               <a  href="{{ item.url | within: collections.all }}">
                 <img class="cart__productImage" src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
               </a>
             </td>
-            <td style="color: white;">
+            <td  style="color: white;">
               <a  style="color: white;" href="{{ item.url }}">{{ item.product.title }}</a>
               {{ item.variant.title }}
               <a class="cart__remove" style="color:white" href="/cart/change?line={{ forloop.index }}&quantity=0">remove</a>

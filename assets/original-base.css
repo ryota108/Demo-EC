@@ -609,13 +609,14 @@ a {
 }
 .blog__articleTitle {
   font-size: 1.8rem;
+  color: white;
+  margin-top: 15%;
 }
 .blog__allTitle{
   color: #e0ca82;
   text-align: center;
   margin-top: 20%;
   font-family: "Gulzar", serif;
-
 }
 .blog__thumbNail {
   width: 45%;
@@ -624,9 +625,9 @@ a {
 
 .blog__publishDate {
   color: white;
-  font-size: 0.5rem;
-  margin-top: 25%;
-  margin-right: 5%;
+  font-size: 1rem;
+  margin-top: 10%;
+  margin-left: 50%;
 }
 .blogSection {
   margin-top: 0px;
@@ -769,7 +770,7 @@ a {
 .cart__regularPrice{
   color: white !important;
   margin-top: 5%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: line-through;
   text-align: center;
 }
@@ -797,6 +798,10 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
+}
+
+.cart__productTd{
+  padding: 0px !important;
 }
 
 .cart__productImage {
@@ -964,10 +969,11 @@ select {
   color: white;
   outline: none;
   border: 1px solid #e0ca82;
-  width: 10%;
+  width: 15%;
   padding: 5px 15px;
   border-radius: 20px;
 }
+
 .quanity-label {
   color: #e0ca82;
   font-family: "Gulzar", serif;
@@ -1038,7 +1044,7 @@ select {
   margin-top: 5%;
   margin-right: 2%;
   outline: none;
-  width: 50px;
+  width: 60px;
   border: 1px solid #e0ca82;
   padding: 5px 20px;
   border-radius: 20px;

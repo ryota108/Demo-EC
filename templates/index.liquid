@@ -73,8 +73,10 @@
     <a href={{article.url}}>
       <div class="blog">
         <img src="{{article.image | img_url:"300x200"}}" alt="ブログのサムネイル" class="blog__thumbNail">
-        <h1 class="blog__articleTitle">{{article.title}}</h1>
-       <p class="blog__publishDate" style="color: white; font-size: 10px; margin-top: 20%;">{{ article.published_at | time_tag: format: 'date' }}</p>
+        <div style="width: 100%;">
+          <h1 class="blog__articleTitle">{{article.title}}</h1>
+         <p class="blog__publishDate">{{ article.published_at | time_tag: format: 'date' }}</p>
+        </div>
       </div>
     </a>
     {% endfor %}
