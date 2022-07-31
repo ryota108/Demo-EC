@@ -253,6 +253,9 @@ a {
 
 .swiper-pagination {
   color: #e0ca82;
+  position: relative;
+  top: 79vh;
+  z-index: 100;
 }
 
 .swiper-button-prev::before {
@@ -665,6 +668,10 @@ a {
   margin: auto;
   letter-spacing: 2px;
 }
+.blog__main > p{
+  color: #e0ca82;
+  font-family: "Gulzar", serif;
+}
 
 .blog__text {
   color: #e0ca82;
@@ -679,7 +686,7 @@ a {
   display: flex;
   color: #e0ca82;
   margin-top: 5%;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 .blog__info > p:nth-child(2) {
