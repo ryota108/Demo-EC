@@ -431,12 +431,39 @@ a {
   flex-wrap: wrap;
 }
 
-.category__img {
+.grid--1 {
+  width: 300px;
+  margin: 30px  0px ;
+}
+.grid--2{
   width: 150px;
-  height: 130px;
-  margin: 5px;
+  margin: 30px 0px;
 }
 
+.grid--3 {
+  width: 80px;
+  margin: 20px 10px;
+}
+
+.category__img {
+  width: 100%;
+  height: auto;
+}
+
+.category__img1 {
+  width: 300px;
+  height: 300px;
+}
+.category__img2 {
+  width: 120px;
+  height: 120px;
+}
+
+.category__img3 {
+  width: 80px;
+  height: 80px;
+  max-height: 80px;
+}
 .category__text {
   color: #e0ca82;
   font-family: "Gulzar", serif;

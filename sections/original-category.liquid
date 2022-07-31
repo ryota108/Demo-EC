@@ -4,9 +4,9 @@
   <div class="container">
   <ul class="category__all">
     {% for collection in collections %}
-    <li class="category__list">
+    <li class="category__list grid--{{section.settings.columns_mobile}}">
       <a href={{collection.url}}>
-        <img class="category__img" src={{ collection.image | img_url:'300x' }}alt="">
+        <img class="category__img{{section.settings.colunms_mobile}}" src={{ collection.image | img_url:'300x' }}alt="">
         <p class="category__text">{{collection.title}}</p>
       </a>
     </li>
@@ -14,3 +14,21 @@
   </ul>
 </div>
 </section>
+
+
+{% schema %}
+{
+	"name": "Category",
+	"settings": [
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2,
+      "label": "モバイル版のカラム数"   
+    }
+	]
+}
+{% endschema %}
