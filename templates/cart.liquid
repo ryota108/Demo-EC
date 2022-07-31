@@ -1,5 +1,5 @@
 {% if cart.item_count > 0 %}
-  <h1>cart</h1>
+  <h1 class="cart__title">Your Cart</h1>
   <form action="/cart" method="post" novalidate>
     <table>
       <thead >
@@ -24,9 +24,6 @@
             <td class="cart__price">{{ item.price | money }}
               <input class="cart__quanity-input" type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
             </td>
-            <!-- <td >
-              <input class="cart__quanity-input" type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0">
-            </td> -->
             <td style="color: white;">
               {% if item.original_line_price != item.line_price %}{{ item.original_line_price | money }}{% endif %}
               {{ item.line_price | money }}
@@ -43,6 +40,5 @@
     </div>
   </form>
 {% else %}
-  <h2>cart</h2>
-  カートにはなにも入っていません
+  <p class="cart__emptyText">カートには何も入っていません</p>
 {% endif %}

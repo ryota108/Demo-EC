@@ -672,7 +672,7 @@ a {
   display: flex;
   color: #e0ca82;
   margin-top: 5%;
-  margin-left: 30%;
+  margin-left: 25%;
 }
 
 .blog__info > p:nth-child(2) {
@@ -760,7 +760,20 @@ a {
   font-size: small;
   text-decoration: underline;
 }
-
+.cart__empty{
+  color: white;
+  font-size: 2rem;
+}
+.cart__emptyText{
+  color: white;
+  text-align: center;
+  margin-top: 25%;
+  font-size: 2rem;
+  font-family: "Gulzar", serif;
+}
+.cart__emptyLink{
+  color: white;
+}
 .cart__product {
   background-color: transparent;
   border: 1px solid gray;
@@ -777,6 +790,14 @@ a {
   width: 125px;
   height: auto;
   margin-left: 0%;
+}
+
+.cart__title{
+  margin-top: 5%;
+  color: #e0ca82;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Gulzar", serif;
 }
 
 th {
