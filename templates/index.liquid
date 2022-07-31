@@ -54,11 +54,11 @@
               <p class="slider__explainTap">詳しくはスライドをタップ</p>
             </div>
           </a></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
       <div class="swiper-pagination"></div>
-    </div>
   </section>
   <!-- {% section "original-slider"%} -->
 
@@ -79,7 +79,7 @@
     <a href={{article.url}}>
       <div class="blog">
         <img src="{{article.image | img_url:"300x200"}}" alt="ブログのサムネイル" class="blog__thumbNail">
-        <h1>{{article.title}}</h1>
+        <h1 class="blog__articleTitle">{{article.title}}</h1>
        <p class="blog__publishDate" style="color: white; font-size: 10px; margin-top: 20%;">{{ article.published_at | time_tag: format: 'date' }}</p>
       </div>
     </a>
