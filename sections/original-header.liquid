@@ -18,19 +18,12 @@
       <li class="mobile-menu__list">
         <a href={{shop.url}}><img class="mobile-menu__shopLogo" src="{{ 'logo2.png' | asset_url }}" alt="logo"></a>
       </li>
-      <li class="mobile-menu__list"><a href={{shop.url}} class="mobile-menu__link" id="link1">
-          <h1 class="mobile-menu__linkText"><span>H</span>ome
+      {% for link in linklists.header-menu.links %}
+        <li class="mobile-menu__list"><a href="{{link.url}}" class="mobile-menu__link" id="link1">
+          <h1 class="mobile-menu__linkText">{{link.title}}
         </a></h1>
       </li>
-      {% assign collection  = collections["all"] %}
-      <li class="mobile-menu__list"><a href={{collection.url}} class="mobile-menu__link">
-          <h1 class="mobile-menu__linkText"><span>P</span>roduct
-        </a></h1>
-      </li>
-      <li class="mobile-menu__list"><a  href= "{{blogs["ALL"].url}}" class="mobile-menu__link">
-          <h1 class="mobile-menu__linkText"><span>B</span>log
-        </a></h1>
-      </li>
+     {% endfor %}
       <li class="mobile-menu__list">
         <div class="mobile-menu__map"><img class="mobile-menu__logo" src="{{ 'map.png' | asset_url }}">
           <h1 class="mobile-menu__mapText">〒100-0014 東京都千代田区永田町<br />１丁目７−１</h1>

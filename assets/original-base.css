@@ -253,9 +253,6 @@ a {
 
 .swiper-pagination {
   color: #e0ca82;
-  position: relative;
-  top: 79vh;
-  z-index: 100;
 }
 
 .swiper-button-prev::before {
