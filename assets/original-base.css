@@ -63,7 +63,7 @@ a {
 
 .mobile-menu__btn > span {
   margin: auto;
-  margin-top: 10%;
+  margin-top: 12%;
   background-color: #e0ca82;
   width: 35px;
   height: 2px;
@@ -824,7 +824,23 @@ th {
   top: 3%;
   right: 3%;
 }
-
+.cart__count{
+  position: absolute;
+  color: white;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(147, 2, 2);
+  border-radius: 50%;
+}
+.cart__count > span {
+  position: relative;
+  top: -5px;
+  left: 5px;
+}
+.cart__logoImg {
+  width: 50px;
+  height: 50px;
+}
 .cart__border {
   color: #e0ca82;
   margin-top: -20px;
