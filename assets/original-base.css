@@ -217,7 +217,7 @@ a {
 }
 
 .slider__explain {
-  width: 90%;
+  width: 85%;
   border-radius: 20px;
   margin: auto;
   height: 50vh;
@@ -610,7 +610,13 @@ a {
 .blog__articleTitle {
   font-size: 1.8rem;
 }
+.blog__allTitle{
+  color: #e0ca82;
+  text-align: center;
+  margin-top: 20%;
+  font-family: "Gulzar", serif;
 
+}
 .blog__thumbNail {
   width: 45%;
   height: 100%;
@@ -672,7 +678,7 @@ a {
   display: flex;
   color: #e0ca82;
   margin-top: 5%;
-  margin-left: 25%;
+  margin-left: 20%;
 }
 
 .blog__info > p:nth-child(2) {
@@ -759,6 +765,13 @@ a {
   font-weight: 100;
   font-size: small;
   text-decoration: underline;
+}
+.cart__regularPrice{
+  color: white !important;
+  margin-top: 5%;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  text-align: center;
 }
 .cart__empty{
   color: white;
