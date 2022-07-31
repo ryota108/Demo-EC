@@ -85,9 +85,9 @@ a {
   height: 60px;
 }
 
-.mobile-menu__list {
+/* .mobile-menu__list {
   margin-bottom: 20px;
-}
+} */
 
 .mobile-menu__mapText {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -608,7 +608,8 @@ a {
   margin: auto;
 }
 .blog__articleTitle {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  margin-left: 5%;
   color: white;
   margin-top: 15%;
 }
@@ -970,6 +971,7 @@ select {
 }
 .quanity-input {
   background-color: #000;
+  text-align: center;
   color: white;
   outline: none;
   border: 1px solid #e0ca82;
@@ -1043,6 +1045,7 @@ select {
   display: flex;
 }
 .cart__quanity-input {
+  text-align: center;
   background-color: #000;
   color: white;
   margin-top: 5%;
