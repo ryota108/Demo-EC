@@ -75,7 +75,7 @@
     <h1 class="sectionTitle"><span>B</span>log</h1>
     <!-- blog -->
     <div class="container">
-    {% for article in blogs["TOP"].articles |limit:3 %}
+    {% for article in blogs["ALL"].articles |limit:2 %}
     <a href={{article.url}}>
       <div class="blog">
         <img src="{{article.image | img_url:"300x200"}}" alt="ブログのサムネイル" class="blog__thumbNail">
@@ -84,7 +84,7 @@
       </div>
     </a>
     {% endfor %}
-      <a style="color: white;" href= "{{blogs.url}}" >
+      <a style="color: white;" href= "{{blogs["ALL"].url}}" >
         view more
       </a>
     </div>

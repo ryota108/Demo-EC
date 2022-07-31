@@ -7,7 +7,7 @@
 <hr class="cart__meatBorder"/>
 <div class="cart__meatExplain">
 <p>{{product.description}}</p>
-<p style="color:white;">-{{discount.total_amount | money}}</p>
+<p style="color:white;">-{{product.compare_at_price}}</p>
 <h1 class="cart__meatPrice">{{product.price | money}}(税込)</h1>
 </div>
 <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
