@@ -1,0 +1,91 @@
+{{ 'custom-line-provider.css' | asset_url | stylesheet_tag }}
+
+<div id="line-provider">
+    <a class="custom-line-provider custom-line-provider_style" href="http://localhost:3000/login">
+        LINE連携ボタン
+    </a>
+    <span id="line-connect-status" class="custom-line-connect-status custom-line-connect-status_style">未連携</span>
+</div>
+
+<script>
+    const userId = '{{ customer.id }}';
+    const storeUrl = "https://" + location.host;
+    const url = new URL(location.href);
+    const params =url.searchParams
+    const id = params.get("lineId")
+    const error = params.get("error")
+    const status = params.get("status")
+    const line_field = document.getElementById("line-provider")
+    const line_connect_status = document.getElementById("line-connect-status")
+
+    console.log(userId);
+    console.log(storeUrl);
+    console.log(params.get('lineId'))
+    console.log(params)
+
+    const body = {
+        userId: userId,
+        storeUrl: storeUrl,
+    };
+
+    const request = {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    };
+
+    if (id) {
+        body.lineId = id
+        request.body = JSON.stringify(body)
+        fetch("http://localhost:3000/account/graphql", request)
+          .then(res => res.json())
+          .then(res => { 
+            console.log(res)
+            })
+        　.catch((error) => {
+            console.log(error.err.msg)
+            const errorMessage = document.createElement("p")
+            errorMessage.innerText = error.err.msg
+            line_field.append(errorMessage)
+          })
+          .finally(() => {
+             location.assign(storeUrl + "/account")
+           })
+    } else if (error) {
+        console.log(error)
+        console.log(status)
+
+        switch (status) {
+            case "400":
+                console.log("DOＭ追加")
+                //let errorMessage = document.createElement("p")
+                line_connect_status.innerText = "エラー：アプリへの認可が拒否されました。"
+                // line_field.appendChild(errorMessage)
+
+                break
+            case "501":
+                errorMessage = document.createElement("p")
+                errorMessage.innerText = "アクセストークンの発行に失敗しました。"
+                line_field.append(errorMessage)
+                break
+            default:
+                console.log("Default")
+        }
+    } else {
+        request.body = JSON.stringify(body)
+        fetch("http://localhost:3000/account/confirm", request)
+         .then((res) => res.json())
+         .then((res) => {
+            console.log(res)
+            if (res.status === "connect") {
+                line_connect_status.innerText = "連携中"
+                line_field.disabled = true
+            }
+            
+        })
+         .catch((error) => {
+            // 何もしない
+        })
+    }
+</script>
