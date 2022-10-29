@@ -1,0 +1,32 @@
+a.custom-line-provider  {
+    display: inline-block;
+    max-width: 200px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointerl;
+}
+
+a.custom-line-provider_style {
+    font-weight: 600;
+    text-decoration: none;
+    background-color: white;
+    text-align: center;
+}
+
+a.custom-line-provider_style:hover {
+    color: white;
+    background-color: black;
+}
+
+a.custom-line-provider_style.error {
+    border-color: red;
+}
+
+span.custom-line-connect-status {
+    padding-left: 80px
+}
+
+span.custom-line-connect-status_style {
+    font-weight: 700;
+    color: black;
+}
