@@ -1,7 +1,7 @@
 {{ 'custom-line-provider.css' | asset_url | stylesheet_tag }}
 
 <div id="line-provider">
-    <a class="custom-line-provider custom-line-provider_style" href="http://localhost:3000/login">
+    <a class="custom-line-provider custom-line-provider_style" href="https://tsuzucle-line-test-manasan.loca.lt/login">
         LINE連携ボタン
     </a>
     <span id="line-connect-status" class="custom-line-connect-status custom-line-connect-status_style">未連携</span>
@@ -38,7 +38,7 @@
     if (id) {
         body.lineId = id
         request.body = JSON.stringify(body)
-        fetch("http://localhost:3000/account/graphql", request)
+        fetch("https://tsuzucle-line-test-manasan.loca.lt/account/graphql", request)
           .then(res => res.json())
           .then(res => { 
             console.log(res)
@@ -74,7 +74,7 @@
         }
     } else {
         request.body = JSON.stringify(body)
-        fetch("http://localhost:3000/account/confirm", request)
+        fetch("https://tsuzucle-line-test-manasan.loca.lt/account/confirm", request)
          .then((res) => res.json())
          .then((res) => {
             console.log(res)
