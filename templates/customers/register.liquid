@@ -113,6 +113,19 @@
         {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
       </span>
     {%- endif -%}
+    <div class="field">
+<input
+type="date"
+name="customer[note][birthday]"
+id="RegisterForm-Birthday"
+{% if form.birthday %}value="{{ form.birthday }}"{% endif %}
+autocomplete="bday"
+placeholder="{{ 'customer.register.birthday' | t }}"
+>
+<label for="RegisterForm-Birthday">
+{{ 'customer.register.birthday' | t }}
+</label>
+</div>
     <button>
       {{ 'customer.register.submit' | t }}
     </button>
