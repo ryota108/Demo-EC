@@ -133,11 +133,10 @@ placeholder="{{ 'customer.register.birthday' | t }}"
   {%- endform -%}
           </div>
 <script>
-    const input = document.getElementById("RegisterForm-Birthday")
-     input.addEventListener("change",testFunc)
-    const testFunc = () => {
-      console.log(input)
-    }
+   document.getElementById("RegisterForm-Birthday").onchange = function() { 
+    var date = document.getElementById("RegisterForm-Birthday").value;
+    alert(date);
+};
   // function(){
   // const url = new URL(window.location.href);
   // const params = url.searchParams;
