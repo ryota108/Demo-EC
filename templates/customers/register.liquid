@@ -122,6 +122,7 @@ id="RegisterForm-Birthday"
 {% if form.birthday %}value="{{ form.birthday }}"{% endif %}
 autocomplete="bday"
 placeholder="{{ 'customer.register.birthday' | t }}"
+name="customer[tags]"  
 >
 <label for="RegisterForm-Birthday">
   生年月日
@@ -135,15 +136,8 @@ placeholder="{{ 'customer.register.birthday' | t }}"
 <script>
    document.getElementById("RegisterForm-Birthday").onchange = function() { 
     var date = document.getElementById("RegisterForm-Birthday").value;
-    console.log(date)
+        const addTagsInput = `<input type="hidden" name="customer[tags]" value="${date}">`;
+    createCustomerForm.insertAdjacentHTML('beforeend',addTagsInput);
 };
-  // function(){
-  // const url = new URL(window.location.href);
-  // const params = url.searchParams;
-  // if( params.get('addTags') != null ){
-  //   const createCustomerForm = document.getElementById("create_customer");
-  //   const addTagsInput = `<input type="hidden" name="customer[tags]" value="${params.get('addTags')}">`;
-  //   createCustomerForm.insertAdjacentHTML('beforeend',addTagsInput);
-  // } 
 </script>
             
