@@ -139,6 +139,7 @@ placeholder="{{ 'customer.register.birthday' | t }}"
     const createCustomerForm = document.getElementById("create_customer");
     const addTagsInput = `<input type="hidden" name="customer[tags]" value="${params.get('addTags')}">`;
     createCustomerForm.insertAdjacentHTML('beforeend',addTagsInput);
+    console.log("test")
   }
 })();</script>
             
