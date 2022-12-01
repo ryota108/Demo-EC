@@ -132,19 +132,19 @@ placeholder="{{ 'customer.register.birthday' | t }}"
     </button>
   {%- endform -%}
           </div>
-<script>(
+<script>
     const testFunc = () => {
       console.log("ok")
     }
-    const dateControl = document.querySelector('input[type="date"]');
-     dateControl.addEventListener("change",testFunc)
-  function(){
-  const url = new URL(window.location.href);
-  const params = url.searchParams;
-  if( params.get('addTags') != null ){
-    const createCustomerForm = document.getElementById("create_customer");
-    const addTagsInput = `<input type="hidden" name="customer[tags]" value="${params.get('addTags')}">`;
-    createCustomerForm.insertAdjacentHTML('beforeend',addTagsInput);
-  } 
-})();</script>
+    const input = document.getElementById("RegisterForm-Birthday")
+     input.addEventListener("change",testFunc)
+  // function(){
+  // const url = new URL(window.location.href);
+  // const params = url.searchParams;
+  // if( params.get('addTags') != null ){
+  //   const createCustomerForm = document.getElementById("create_customer");
+  //   const addTagsInput = `<input type="hidden" name="customer[tags]" value="${params.get('addTags')}">`;
+  //   createCustomerForm.insertAdjacentHTML('beforeend',addTagsInput);
+  // } 
+</script>
             
