@@ -143,7 +143,7 @@ name="customer[tags]"
         const addTagsInput = `<input type="hidden" name="customer[tags]" value="${birthdayMonth}月">`;
      const addTagsFullInput = `<input type="hidden" name="customer[tags]" value="${date}">`;
     createCustomerForm.insertAdjacentHTML('beforeend',addTagsInput);
-      registerEmail.insertAdjacentHTML("beforeend",addTagsFullInput);
+      createCustomerForm.insertAdjacentHTML("afterbegin",addTagsFullInput);
 };
 </script>
             
