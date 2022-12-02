@@ -136,13 +136,14 @@ name="customer[tags]"
 <script>
    document.getElementById("RegisterForm-Birthday").onchange = function() { 
     var date = document.getElementById("RegisterForm-Birthday").value;
+     const registerEmail =  document.getElementById("RegisterForm-email")
      const timestamp = new Date(date)
      const birthdayMonth = timestamp.getMonth() + 1;
      const createCustomerForm = document.getElementById("create_customer");
         const addTagsInput = `<input type="hidden" name="customer[tags]" value="${birthdayMonth}月">`;
      const addTagsFullInput = `<input type="hidden" name="customer[tags]" value="${date}">`;
     createCustomerForm.insertAdjacentHTML('beforeend',addTagsInput);
-      createCustomerForm.insertAdjacentHTML('beforeend',addTagsFullInput);
+      registerEmail.insertAdjacentHTML("beforeend",addTagsFullInput);
 };
 </script>
             
