@@ -140,7 +140,9 @@ name="customer[tags]"
      const birthdayMonth = timestamp.getMonth() + 1;
      const createCustomerForm = document.getElementById("create_customer");
         const addTagsInput = `<input type="hidden" name="customer[tags]" value="${birthdayMonth}月">`;
+     const addTagsFullInput = `<input type="hidden" name="customer[tags]" value="${date}">`;
     createCustomerForm.insertAdjacentHTML('beforeend',addTagsInput);
+      createCustomerForm.insertAdjacentHTML('beforeend',addTagsFullInput);
 };
 </script>
             
