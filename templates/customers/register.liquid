@@ -1,5 +1,5 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
-{{ "test-birthday"|asset_url|  }}
+{{ "test-birthday" | asset_url }}
 
 <div class="customer register">
   <svg style="display: none">
@@ -147,3 +147,13 @@ name="customer[tags]"
 };
 </script>
             
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{{ "test-birthday"|asset_url|  }}'
+  to: '{{ "test-birthday" | asset_url }}'
+  position: 50..83
+{% endcomment %}

@@ -69,7 +69,7 @@
     <h1 class="sectionTitle"><span>B</span>log</h1>
 
     <div class="container">
-    {% for article in blogs["ALL"].articles |limit:2 %}
+    {% for article in blogs.ALL.articles limit: 2 %}
     <a href={{article.url}}>
       <div class="blog">
         <img src="{{article.image | img_url:"300x200"}}" alt="ブログのサムネイル" class="blog__thumbNail">
@@ -90,3 +90,13 @@
 
 </html>
 
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% for article in blogs["ALL"].articles |limit:2 %}'
+  to: "{% for article in blogs.ALL.articles limit: 2 %}"
+  position: 2758..2806
+{% endcomment %}
