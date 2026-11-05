@@ -49,7 +49,7 @@
   <section>
     <div class="container">
       <h1 class="sectionTitle"><span>O</span>ther blogs</h1>
-      {% for article in blogs["ALL"].articles |limit:2 %}
+      {% for article in blogs.ALL.articles limit: 2 %}
       <a href={{article.url}}>
         <div class="blog">
           <img src="{{article.image | img_url:"300x200"}}" alt="ブログのサムネイル" class="blog__thumbNail">
@@ -61,4 +61,13 @@
       </a>
       {% endfor %}
     </div>
-  </section>
+  </section>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% for article in blogs["ALL"].articles |limit:2 %}'
+  to: "{% for article in blogs.ALL.articles limit: 2 %}"
+  position: 1605..1653
+{%- endcomment -%}
